@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>Q1.Difference between “ == “ and “ === “ operators.</h4>
+    <pre>
+       == is used for comparison between two variables irrespective of the datatype of variable. === is used for comparision between two variables but this will check strict type, which means it will check datatype and compare two values.
+    </pre>
+
+    <h4>Q2.What is the spread operator?</h4>
+    <pre>
+        Spread operator allows an iterable to expand in places where 0+ arguments are expected. It is mostly used in the variable array where there is more than 1 values are expected. It allows us the privilege to obtain a list of parameters from an array.
+    </pre>
+
+    <h4>Q3.What are the differences between var, let and const?</h4>
+    <pre>
+        Variables declared with var are in the function scope.
+        Variables declared as let are in the block scope.
+        Variables declared as const are in the block scope.
+     </pre
+    >
+
+    <h4>Q4.What is execution context?</h4>
+    <pre>
+        The Execution Context contains the code that's currently running, and everything that aids in its execution. During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.
+      </pre>
+      <h4>
+       Q5.What is meant by first class functions
+      </h4>
+      <pre>
+        A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+      </pre>
+
+     <h4>Q6.What are closures? Give an example of closure</h4>
+     <pre>
+        A closure can be defined as a JavaScript feature in which the inner function has access to the outer function variable. In JavaScript, every time a closure is created with the creation of a function.
+
+        The closure has three scope chains listed as follows:
+
+        Access to its own scope.
+        Access to the variables of the outer function.
+        Access to the global variables.
+     </pre>
+
+     <h4>Q7.Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()</h4>
+    <pre>
+        The call() method invokes a function with a specified context. In other words, you can tie a function into an object as if it belonged to the object.
+
+        Example:var obj = { num: 2 };
+        function add(a){
+          return this.num + a;
+        }
+        The apply() method does the exact same as call(). The difference is that call() accepts an argument list, but apply() accepts an array of arguments.
+
+        Example:
+        var obj = { num: 2 };
+        
+        function add(a, b){
+          return this.num + a + b;
+        }
+        
+        console.log(add.apply(obj, [3, 5]));
+        The bind() method is reminiscent of call() and apply(). But instead of executing a function immediately, bind() returns a function that can be executed later on.
+        
+        Examole:var obj = { num: 2 };
+
+        function add(a, b){
+          return this.num + a + b;
+        }
+        
+        const func = add.bind(obj, 3, 5);
+        func(); // Returns 10
+
+    </pre>
+  </body>
+</html>
